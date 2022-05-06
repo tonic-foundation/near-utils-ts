@@ -1,0 +1,22 @@
+{
+  "name": "@tonic-foundation/near-config",
+  "homepage": "https://github.com/tonic-foundation/near-js-standards",
+  "repository": "tonic-foundation/near-js-standards",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "author": "dev@tonic.foundation",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -fr lib && tsc"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "near-api-js": "^0.44.2"
+  }
+}

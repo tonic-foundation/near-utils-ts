@@ -1,0 +1,20 @@
+{
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "token": "yarn workspace @tonic-foundation/near-token",
+    "utils": "yarn workspace @tonic-foundation/near-utils",
+    "build:all": "yarn workspaces foreach -pt run build",
+    "version:all": "yarn workspaces foreach version",
+    "publish:all": "npm publish --workspaces"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
+  "version": "0.0.1",
+  "packageManager": "yarn@3.2.0"
+}

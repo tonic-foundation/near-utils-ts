@@ -1,42 +1,6 @@
 import BN from 'bn.js';
 
 /**
- * Sort of like Number.toFixed() for BN values
- * @deprecated use toApproximateDecimalString
- */
-export const formatDecimals = (amount: BN, decimals: number, precision = 0) => {
-  const num = bnToFixed(amount, decimals, precision);
-  const [decPart, fracPart = ''] = num.split('.');
-  const paddedFracPart =
-    fracPart.length > precision
-      ? fracPart.substring(0, precision)
-      : fracPart + '0'.repeat(precision - fracPart.length);
-
-  return `${decPart}.${paddedFracPart}`;
-};
-
-/**
- * @deprecated use toApproximateDecimalString
- */
-export const toReadableNumber = (
-  number: string,
-  decimals: number,
-  precision = 5
-): string => {
-  if (!decimals) return number;
-
-  const wholeStr = number.substring(0, number.length - decimals) || '0';
-  const fracPrecision =
-    precision > 0 ? Math.max(0, Math.min(precision, decimals)) : decimals;
-  const fractionStr = number
-    .substring(number.length - decimals)
-    .padStart(decimals, '0')
-    .substring(0, fracPrecision);
-
-  return `${wholeStr}.${fractionStr}`.replace(/\.?0+$/, '');
-};
-
-/**
  * Analogous to Number.toFixed() for BN values. Example
  *
  * @example bnToFixed(new BN(123), 2, 5) === '1.23000'; // true

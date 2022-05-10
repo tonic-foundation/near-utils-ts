@@ -1,5 +1,6 @@
 import BN from 'bn.js';
-import { toDecimalPaddedString, toReadableNumber } from '.';
+import { toDecimalPaddedString } from '.';
+import { bnToFixed } from './format';
 
 export const ZERO = new BN(0);
 
@@ -28,7 +29,7 @@ export const bnToApproximateDecimal = (
   decimals: number,
   precision?: number
 ) => {
-  return parseFloat(toReadableNumber(v.toString(), decimals, precision));
+  return parseFloat(bnToFixed(v, decimals, precision));
 };
 
 export const decimalToBn = (price: number, decimals: number) => {

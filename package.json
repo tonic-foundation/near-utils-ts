@@ -15,6 +15,6 @@
     "trailingComma": "es5",
     "singleQuote": true
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "yarn@3.2.0"
 }

@@ -19,7 +19,7 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "@tonic-foundation/near-utils": "0.0.1",
+    "@tonic-foundation/utils": "0.0.1",
     "bn.js": "^5.2.0",
     "near-api-js": "^0.44.2"
   }

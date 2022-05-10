@@ -1,6 +1,6 @@
 import BN from 'bn.js';
 import { Account } from 'near-api-js';
-import { decimalToBn, functionCallWithOutcome } from '@tonic-foundation/near-utils';
+import { decimalToBn, functionCallWithOutcome } from '@tonic-foundation/utils';
 import { StorageBalance } from './types';
 
 export * from './types';

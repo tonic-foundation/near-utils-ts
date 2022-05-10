@@ -1,4 +1,4 @@
-import { functionCallWithOutcome, tgasAmount } from '@tonic-foundation/near-utils';
+import { functionCallWithOutcome, tgasAmount } from '@tonic-foundation/utils';
 import BN from 'bn.js';
 import { Account } from 'near-api-js';
 import { NEAR_METADATA } from './native-near';

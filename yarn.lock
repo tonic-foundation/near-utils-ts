@@ -5,34 +5,11 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@tonic-foundation/near-config@workspace:packages/config":
+"@tonic-foundation/config@workspace:packages/config":
   version: 0.0.0-use.local
-  resolution: "@tonic-foundation/near-config@workspace:packages/config"
+  resolution: "@tonic-foundation/config@workspace:packages/config"
   dependencies:
     "@tsconfig/recommended": ^1.0.1
-    near-api-js: ^0.44.2
-    typescript: ^4.6.4
-  languageName: unknown
-  linkType: soft
-
-"@tonic-foundation/near-token@workspace:packages/token":
-  version: 0.0.0-use.local
-  resolution: "@tonic-foundation/near-token@workspace:packages/token"
-  dependencies:
-    "@tonic-foundation/near-utils": 0.0.1
-    "@tsconfig/recommended": ^1.0.1
-    near-api-js: ^0.44.2
-    typescript: ^4.6.4
-  languageName: unknown
-  linkType: soft
-
-"@tonic-foundation/near-utils@0.0.1, @tonic-foundation/near-utils@workspace:packages/utils":
-  version: 0.0.0-use.local
-  resolution: "@tonic-foundation/near-utils@workspace:packages/utils"
-  dependencies:
-    "@tsconfig/recommended": ^1.0.1
-    "@types/bn.js": ^5.1.0
-    bn.js: ^5.2.0
     near-api-js: ^0.44.2
     typescript: ^4.6.4
   languageName: unknown
@@ -42,7 +19,30 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/storage@workspace:packages/storage"
   dependencies:
-    "@tonic-foundation/near-utils": 0.0.1
+    "@tonic-foundation/utils": 0.0.1
+    "@tsconfig/recommended": ^1.0.1
+    "@types/bn.js": ^5.1.0
+    bn.js: ^5.2.0
+    near-api-js: ^0.44.2
+    typescript: ^4.6.4
+  languageName: unknown
+  linkType: soft
+
+"@tonic-foundation/token@workspace:packages/token":
+  version: 0.0.0-use.local
+  resolution: "@tonic-foundation/token@workspace:packages/token"
+  dependencies:
+    "@tonic-foundation/utils": 0.0.1
+    "@tsconfig/recommended": ^1.0.1
+    near-api-js: ^0.44.2
+    typescript: ^4.6.4
+  languageName: unknown
+  linkType: soft
+
+"@tonic-foundation/utils@0.0.1, @tonic-foundation/utils@workspace:packages/utils":
+  version: 0.0.0-use.local
+  resolution: "@tonic-foundation/utils@workspace:packages/utils"
+  dependencies:
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.0

@@ -1,6 +1,5 @@
 // from https://github.com/near/near-cli/blob/20ec871185be8b163567e147dc909f1c7f383ca9/config.js
 import { ConnectConfig } from 'near-api-js';
-import { getExplorerBaseUrl } from './explorer';
 
 export type NearEnv =
   | 'mainnet'
@@ -12,10 +11,8 @@ export type NearEnv =
   | 'test'
   | 'ci';
 
-export type NearConnectConfig = ConnectConfig & { explorerUrl?: string };
-
-export function getNearConfig(env: NearEnv): NearConnectConfig {
-  let config: NearConnectConfig;
+export function getNearConfig(env: NearEnv): ConnectConfig {
+  let config: ConnectConfig;
   const headers = {};
 
   switch (env) {
@@ -29,7 +26,6 @@ export function getNearConfig(env: NearEnv): NearConnectConfig {
         walletUrl: 'https://wallet.near.org',
         helperUrl: 'https://helper.mainnet.near.org',
         headers,
-        explorerUrl: process.env.NEAR_EXPLORER_URL || getExplorerBaseUrl(env),
       };
       break;
     case 'development':
@@ -42,7 +38,6 @@ export function getNearConfig(env: NearEnv): NearConnectConfig {
         walletUrl: 'https://wallet.testnet.near.org',
         helperUrl: 'https://helper.testnet.near.org',
         headers,
-        explorerUrl: process.env.NEAR_EXPLORER_URL || getExplorerBaseUrl(env),
       };
       break;
     case 'local':
@@ -60,7 +55,6 @@ export function getNearConfig(env: NearEnv): NearConnectConfig {
           process.env.NEAR_WALLET_URL || 'http://localhost:4000/wallet',
         headers,
         helperUrl: process.env.NEAR_HELPER_URL || 'http://localhost:3000',
-        explorerUrl: process.env.NEAR_EXPLORER_URL || 'http://localhost:9001',
       };
       break;
     case 'test':

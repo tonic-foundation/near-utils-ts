@@ -1,5 +1,6 @@
 // from https://github.com/near/near-cli/blob/20ec871185be8b163567e147dc909f1c7f383ca9/config.js
 import { ConnectConfig } from 'near-api-js';
+import { getExplorerBaseUrl } from './explorer';
 
 export type NearEnv =
   | 'mainnet'
@@ -13,12 +14,9 @@ export type NearEnv =
 
 export type NearConnectConfig = ConnectConfig & { explorerUrl?: string };
 
-export function getNearConfig(
-  env: NearEnv,
-  userAgent: string = 'tonic-sdk-js'
-): NearConnectConfig {
+export function getNearConfig(env: NearEnv): NearConnectConfig {
   let config: NearConnectConfig;
-  const headers = { 'x-requested-with': userAgent };
+  const headers = {};
 
   switch (env) {
     case 'production':
@@ -31,7 +29,7 @@ export function getNearConfig(
         walletUrl: 'https://wallet.near.org',
         helperUrl: 'https://helper.mainnet.near.org',
         headers,
-        explorerUrl: 'https://explorer.mainnet.near.org',
+        explorerUrl: getExplorerBaseUrl(env),
       };
       break;
     case 'development':
@@ -44,7 +42,7 @@ export function getNearConfig(
         walletUrl: 'https://wallet.testnet.near.org',
         helperUrl: 'https://helper.testnet.near.org',
         headers,
-        explorerUrl: 'https://explorer.testnet.near.org',
+        explorerUrl: getExplorerBaseUrl(env),
       };
       break;
     case 'local':

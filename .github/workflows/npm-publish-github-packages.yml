@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
@@ -23,12 +25,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn install --immutable
       - run: yarn version:all ${{ github.event.release.tag_name }}
+      - run: yarn build:all
+      - run: yarn publish:all --dry-run
       - run: yarn publish:all --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

@@ -29,7 +29,7 @@ export function getNearConfig(env: NearEnv): NearConnectConfig {
         walletUrl: 'https://wallet.near.org',
         helperUrl: 'https://helper.mainnet.near.org',
         headers,
-        explorerUrl: getExplorerBaseUrl(env),
+        explorerUrl: process.env.NEAR_EXPLORER_URL || getExplorerBaseUrl(env),
       };
       break;
     case 'development':
@@ -42,7 +42,7 @@ export function getNearConfig(env: NearEnv): NearConnectConfig {
         walletUrl: 'https://wallet.testnet.near.org',
         helperUrl: 'https://helper.testnet.near.org',
         headers,
-        explorerUrl: getExplorerBaseUrl(env),
+        explorerUrl: process.env.NEAR_EXPLORER_URL || getExplorerBaseUrl(env),
       };
       break;
     case 'local':

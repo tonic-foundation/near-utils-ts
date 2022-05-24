@@ -4,11 +4,11 @@ export function getExplorerBaseUrl(env: NearEnv) {
   switch (env) {
     case 'test':
     case 'testnet': {
-      return 'https://testnet.nearblocks.io/';
+      return 'https://explorer.testnet.near.org/';
     }
     case 'production':
     case 'mainnet': {
-      return 'https://nearblocks.io/';
+      return 'https://explorer.mainnet.near.org/';
     }
     default: {
       throw new Error(`No known explorer for NEAR env ${env}`);

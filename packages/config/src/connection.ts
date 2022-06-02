@@ -11,14 +11,9 @@ export type NearEnv =
   | 'test'
   | 'ci';
 
-export type NearConnectConfig = ConnectConfig & { explorerUrl?: string };
-
-export function getNearConfig(
-  env: NearEnv,
-  userAgent: string = 'tonic-sdk-js'
-): NearConnectConfig {
-  let config: NearConnectConfig;
-  const headers = { 'x-requested-with': userAgent };
+export function getNearConfig(env: NearEnv): ConnectConfig {
+  let config: ConnectConfig;
+  const headers = {};
 
   switch (env) {
     case 'production':
@@ -31,7 +26,6 @@ export function getNearConfig(
         walletUrl: 'https://wallet.near.org',
         helperUrl: 'https://helper.mainnet.near.org',
         headers,
-        explorerUrl: 'https://explorer.mainnet.near.org',
       };
       break;
     case 'development':
@@ -44,7 +38,6 @@ export function getNearConfig(
         walletUrl: 'https://wallet.testnet.near.org',
         helperUrl: 'https://helper.testnet.near.org',
         headers,
-        explorerUrl: 'https://explorer.testnet.near.org',
       };
       break;
     case 'local':
@@ -62,7 +55,6 @@ export function getNearConfig(
           process.env.NEAR_WALLET_URL || 'http://localhost:4000/wallet',
         headers,
         helperUrl: process.env.NEAR_HELPER_URL || 'http://localhost:3000',
-        explorerUrl: process.env.NEAR_EXPLORER_URL || 'http://localhost:9001',
       };
       break;
     case 'test':

@@ -11,7 +11,7 @@ export type NearEnv =
   | 'test'
   | 'ci';
 
-export function getNearConfig(env: NearEnv): ConnectConfig {
+export function getNearConfig(env: NearEnv, extra?: Partial<ConnectConfig>): ConnectConfig {
   let config: ConnectConfig;
   const headers = {};
 
@@ -70,5 +70,8 @@ export function getNearConfig(env: NearEnv): ConnectConfig {
       break;
   }
 
-  return config;
+  return {
+    ...config,
+    ...extra
+  };
 }

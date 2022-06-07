@@ -15,10 +15,12 @@
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
+    "@types/bn.js": "^5.1.0",
     "typescript": "^4.6.4"
   },
   "dependencies": {
     "@tonic-foundation/utils": "0.0.2",
+    "bn.js": "^5.2.1",
     "near-api-js": "^0.44.2"
   }
 }

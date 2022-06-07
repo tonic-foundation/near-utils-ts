@@ -5,7 +5,7 @@ on:
     branches: [develop]
 
 jobs:
-  publish-docs:
+  publish-docs-preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Documentation - v0.0.2</title><meta name="description" content="Documentation for Documentation - v0.0.2"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Documentation - v0.0.2</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1> Documentation - v0.0.2 </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#tonic-ts-libraries" id="tonic-ts-libraries" style="color: inherit; text-decoration: none;">
+  <h1>Tonic TS libraries</h1>
+</a>
+<p>This repository provides a set of Typescript packages that contain wrappers around common operations with <a href="https://github.com/near/near-api-js">near-api-js</a>. </p>
+<ul>
+<li><a href="https://github.com/tonic-foundation/near-utils-ts/tree/master/packages/config">@tonic-foundation/config</a> NEAR network configuration defaults.</li>
+<li><a href="https://github.com/tonic-foundation/near-utils-ts/tree/master/packages/storage">@tonic-foundation/storage</a> Library for interacting with contracts that implement <a href="https://nomicon.io/Standards/StorageManagement">NEP-145</a>.</li>
+<li><a href="https://github.com/tonic-foundation/near-utils-ts/tree/master/packages/token">@tonic-foundation/token</a> Library for interacting with contracts that implement the <a href="https://nomicon.io/Standards/Tokens/FungibleToken/">fungible token standards</a>.</li>
+<li><a href="https://github.com/tonic-foundation/near-utils-ts/tree/master/packages/utils">@tonic-foundation/utils</a> Miscellaneous utilities for NEAR contract calls and displaying decimals.</li>
+</ul>
+
+<a href="#developing" id="developing" style="color: inherit; text-decoration: none;">
+  <h2>Developing</h2>
+</a>
+<pre><code><span class="hl-0">yarn</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">build</span><span class="hl-1">:</span><span class="hl-0">all</span>
+</code></pre>
+
+<a href="#publishing" id="publishing" style="color: inherit; text-decoration: none;">
+  <h2>Publishing</h2>
+</a>
+<pre><code><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">version</span><span class="hl-1">:</span><span class="hl-0">all</span><span class="hl-1"> &lt;</span><span class="hl-0">major</span><span class="hl-1">|</span><span class="hl-0">minor</span><span class="hl-1">|</span><span class="hl-0">patch</span><span class="hl-1">&gt;</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-2">build</span><span class="hl-1">:</span><span class="hl-0">all</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">publish</span><span class="hl-1"> --</span><span class="hl-0">access</span><span class="hl-1"> </span><span class="hl-0">restricted</span><span class="hl-1"> --</span><span class="hl-0">workspaces</span>
+</code></pre>
+
+<a href="#auditing-deps" id="auditing-deps" style="color: inherit; text-decoration: none;">
+  <h2>Auditing deps</h2>
+</a>
+<pre><code><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">audit</span><span class="hl-1"> --</span><span class="hl-0">all</span><span class="hl-1"> --</span><span class="hl-0">recursive</span>
+</code></pre>
+
+<a href="#upgrading-deps" id="upgrading-deps" style="color: inherit; text-decoration: none;">
+  <h2>Upgrading deps</h2>
+</a>
+<pre><code><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">up</span><span class="hl-1"> </span><span class="hl-3">&#39;package-name-here&#39;</span><br/><span class="hl-0">yarn</span><span class="hl-1"> </span><span class="hl-0">up</span><span class="hl-1"> </span><span class="hl-3">&#39;*&#39;</span><span class="hl-1"> # </span><span class="hl-0">bump</span><span class="hl-1"> </span><span class="hl-0">everything</span>
+</code></pre>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/config_src.html">config/src</a></li><li class=" tsd-kind-module"><a href="modules/storage_src.html">storage/src</a></li><li class=" tsd-kind-module"><a href="modules/token_src.html">token/src</a></li><li class=" tsd-kind-module"><a href="modules/utils_src.html">utils/src</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li><li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li><li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li><li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li><li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

@@ -7,7 +7,8 @@
     "utils": "yarn workspace @tonic-foundation/near-utils",
     "build:all": "yarn workspaces foreach -pt run build",
     "version:all": "yarn workspaces foreach version",
-    "publish:all": "npm publish --workspaces"
+    "publish:all": "npm publish --workspaces",
+    "docs:generate": "yarn typedoc --excludePrivate --includeVersion --out site/ packages/**/src/index.ts"
   },
   "prettier": {
     "arrowParens": "always",
@@ -16,5 +17,9 @@
     "singleQuote": true
   },
   "version": "0.0.2",
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "typedoc": "^0.22.17"
+  }
 }

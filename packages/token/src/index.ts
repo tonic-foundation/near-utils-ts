@@ -79,11 +79,9 @@ export interface FtTransferCallArgs {
    */
   amount: BN;
   /**
-   * For full control of what gets sent, pass the message as a string. If the
-   * message is not a string, it will be run through `JSON.stringify` before
-   * sending.
+   * For full control of what gets sent, pass the message as a string.
    */
-  msg?: any;
+  msg?: string;
 }
 export async function ftTransferCall(
   account: Account,
@@ -92,19 +90,13 @@ export async function ftTransferCall(
   gas = tgasAmount(100),
   attachedDeposit = new BN(1)
 ) {
-  // as-is if string
-  // stringified if truthy
-  // empty string by default
-  const msg =
-    typeof args.msg === 'string' ? args.msg && JSON.stringify(args.msg) : '';
-
   return await functionCallWithOutcome(account, {
     contractId: tokenId,
     methodName: 'ft_transfer_call',
     args: {
       receiver_id: args.receiverId,
       amount: args.amount.toString(),
-      msg,
+      msg: args.msg,
     },
     gas,
     attachedDeposit,

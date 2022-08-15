@@ -12,24 +12,29 @@ import BN from 'bn.js';
 export const bnToFixed = (
   num: BN,
   decimals: number,
-  precision: number = 0
+  precision?: number
 ): string => {
   const _num = num.toString();
   if (!decimals) return _num;
 
   const wholePart = _num.substring(0, _num.length - decimals) || '0';
   const fracPrecision =
-    precision > 0 ? Math.max(0, Math.min(precision, decimals)) : decimals;
+    typeof precision === 'number'
+      ? Math.max(0, Math.min(precision, decimals))
+      : decimals;
   const fracPart = _num
     .substring(_num.length - decimals)
     .padStart(decimals, '0')
     .substring(0, fracPrecision);
 
-  if (fracPrecision) {
+  if (fracPrecision === 0) {
+    return wholePart;
+  } else if (fracPrecision) {
     return `${wholePart}.${fracPart.substring(0, fracPrecision)}`;
+  } else {
+    // chop off trailing 0s
+    return `${wholePart}.${fracPart}`.replace(/\.?0+$/, '');
   }
-  // chop off trailing 0s
-  return `${wholePart}.${fracPart}`.replace(/\.?0+$/, '');
 };
 
 /**

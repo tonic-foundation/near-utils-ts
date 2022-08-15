@@ -1,0 +1,5 @@
+undecided:
+  - root-workspace-0b6124
+  - "@tonic-foundation/config"
+  - "@tonic-foundation/storage"
+  - "@tonic-foundation/token"

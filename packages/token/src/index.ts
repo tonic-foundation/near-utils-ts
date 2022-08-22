@@ -3,6 +3,12 @@ import BN from 'bn.js';
 import { Account } from 'near-api-js';
 import { NEAR_METADATA } from './native-near';
 import { FungibleTokenMetadata } from './types';
+import {
+  FtTransferArgs,
+  ftTransfer as makeFtTransferTxn,
+  FtTransferCallArgs,
+  ftTransferCall as makeFtTransferCallTxn,
+} from './transaction';
 
 export * from './native-near';
 export * from './types';
@@ -40,16 +46,6 @@ export const ftBalanceOf = async (
     });
 };
 
-export interface FtTransferArgs {
-  /**
-   * ID of account to send to
-   */
-  receiverId: string;
-  /**
-   * Amount to send
-   */
-  amount: BN;
-}
 export async function ftTransfer(
   account: Account,
   tokenId: string,
@@ -57,32 +53,17 @@ export async function ftTransfer(
   gas = tgasAmount(30),
   attachedDeposit = new BN(1)
 ) {
-  return await functionCallWithOutcome(account, {
-    contractId: tokenId,
-    methodName: 'ft_transfer',
-    args: {
-      receiver_id: args.receiverId,
-      amount: args.amount.toString(),
-    },
-    gas,
-    attachedDeposit,
-  });
+  return await functionCallWithOutcome(
+    account,
+    makeFtTransferTxn(
+      tokenId,
+      args,
+      gas,
+      attachedDeposit
+    ).toAccountFunctionCallParams()
+  );
 }
 
-export interface FtTransferCallArgs {
-  /**
-   * ID of account to send to
-   */
-  receiverId: string;
-  /**
-   * Amount to send
-   */
-  amount: BN;
-  /**
-   * For full control of what gets sent, pass the message as a string.
-   */
-  msg?: string;
-}
 export async function ftTransferCall(
   account: Account,
   tokenId: string,
@@ -90,15 +71,13 @@ export async function ftTransferCall(
   gas = tgasAmount(100),
   attachedDeposit = new BN(1)
 ) {
-  return await functionCallWithOutcome(account, {
-    contractId: tokenId,
-    methodName: 'ft_transfer_call',
-    args: {
-      receiver_id: args.receiverId,
-      amount: args.amount.toString(),
-      msg: args.msg,
-    },
-    gas,
-    attachedDeposit,
-  });
+  return await functionCallWithOutcome(
+    account,
+    makeFtTransferCallTxn(
+      tokenId,
+      args,
+      gas,
+      attachedDeposit
+    ).toAccountFunctionCallParams()
+  );
 }

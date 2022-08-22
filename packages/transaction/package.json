@@ -1,5 +1,5 @@
 {
-  "name": "@tonic-foundation/utils",
+  "name": "@tonic-foundation/transaction",
   "homepage": "https://github.com/tonic-foundation/near-utils-ts",
   "repository": "tonic-foundation/near-utils-ts",
   "version": "0.1.0",
@@ -13,11 +13,13 @@
     "build": "rm -fr lib && tsc"
   },
   "devDependencies": {
+    "@near-wallet-selector/core": "^6.0.0",
     "@tsconfig/recommended": "^1.0.1",
     "@types/bn.js": "^5.1.0",
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@tonic-foundation/utils": "0.1.0",
     "bn.js": "^5.2.0",
     "near-api-js": "^0.45.1"
   }

@@ -21,7 +21,7 @@ __metadata:
   resolution: "@tonic-foundation/config@workspace:packages/config"
   dependencies:
     "@tsconfig/recommended": ^1.0.1
-    near-api-js: ^0.45.1
+    near-api-js: ^1.0.0
     typescript: ^4.6.4
   languageName: unknown
   linkType: soft
@@ -30,12 +30,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/storage@workspace:packages/storage"
   dependencies:
-    "@tonic-foundation/transaction": 0.1.1
-    "@tonic-foundation/utils": 0.1.1
+    "@tonic-foundation/transaction": 1.0.0
+    "@tonic-foundation/utils": 1.0.0
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.0
-    near-api-js: ^0.45.1
+    near-api-js: ^1.0.0
     typescript: ^4.6.4
   languageName: unknown
   linkType: soft
@@ -44,38 +44,38 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/token@workspace:packages/token"
   dependencies:
-    "@tonic-foundation/transaction": 0.1.1
-    "@tonic-foundation/utils": 0.1.1
+    "@tonic-foundation/transaction": 1.0.0
+    "@tonic-foundation/utils": 1.0.0
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.1
-    near-api-js: ^0.45.1
+    near-api-js: ^1.0.0
     typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
-"@tonic-foundation/transaction@0.1.1, @tonic-foundation/transaction@workspace:packages/transaction":
+"@tonic-foundation/transaction@1.0.0, @tonic-foundation/transaction@workspace:packages/transaction":
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/transaction@workspace:packages/transaction"
   dependencies:
     "@near-wallet-selector/core": ^6.0.0
-    "@tonic-foundation/utils": 0.1.1
+    "@tonic-foundation/utils": 1.0.0
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.0
-    near-api-js: ^0.45.1
+    near-api-js: ^1.0.0
     typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
-"@tonic-foundation/utils@0.1.1, @tonic-foundation/utils@workspace:packages/utils":
+"@tonic-foundation/utils@1.0.0, @tonic-foundation/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/utils@workspace:packages/utils"
   dependencies:
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.0
-    near-api-js: ^0.45.1
+    near-api-js: ^1.0.0
     typescript: ^4.6.4
   languageName: unknown
   linkType: soft
@@ -126,17 +126,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bn.js@npm:5.2.0, bn.js@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "bn.js@npm:5.2.0"
-  checksum: 6117170393200f68b35a061ecbf55d01dd989302e7b3c798a3012354fa638d124f0b2f79e63f77be5556be80322a09c40339eda6413ba7468524c0b6d4b4cb7a
-  languageName: node
-  linkType: hard
-
-"bn.js@npm:^5.2.1":
+"bn.js@npm:5.2.1, bn.js@npm:^5.2.1":
   version: 5.2.1
   resolution: "bn.js@npm:5.2.1"
   checksum: 3dd8c8d38055fedfa95c1d5fc3c99f8dd547b36287b37768db0abab3c239711f88ff58d18d155dd8ad902b0b0cee973747b7ae20ea12a09473272b0201c9edd3
+  languageName: node
+  linkType: hard
+
+"bn.js@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "bn.js@npm:5.2.0"
+  checksum: 6117170393200f68b35a061ecbf55d01dd989302e7b3c798a3012354fa638d124f0b2f79e63f77be5556be80322a09c40339eda6413ba7468524c0b6d4b4cb7a
   languageName: node
   linkType: hard
 
@@ -299,11 +299,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"near-api-js@npm:^0.45.1":
-  version: 0.45.1
-  resolution: "near-api-js@npm:0.45.1"
+"near-api-js@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "near-api-js@npm:1.0.0"
   dependencies:
-    bn.js: 5.2.0
+    bn.js: 5.2.1
     borsh: ^0.7.0
     bs58: ^4.0.0
     depd: ^2.0.0
@@ -314,7 +314,7 @@ __metadata:
     node-fetch: ^2.6.1
     text-encoding-utf-8: ^1.0.2
     tweetnacl: ^1.0.1
-  checksum: b684e16c6a0b845bed98ff273a992e6a7d04287ed90c6b2cf3b4bad30f62a906b0e2f6fa0776e4fc8d47bb46d2620f41e20fe909c7b2472e96dedf75fa8b4598
+  checksum: 6475af743de3a43653a8007ea990e5005d3cc4183f7a43387703e109cea0b35b2c572237866d6f9253f4c06b5fe040ed82bf73a6aa31374a9ef4fdd3cfab1536
   languageName: node
   linkType: hard
 

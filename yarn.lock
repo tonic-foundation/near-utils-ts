@@ -5,14 +5,14 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@near-wallet-selector/core@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "@near-wallet-selector/core@npm:6.0.0"
+"@near-wallet-selector/core@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@near-wallet-selector/core@npm:7.0.0"
   dependencies:
     rxjs: ^7.5.5
   peerDependencies:
     near-api-js: ^0.44.2
-  checksum: dd247a87b0ac2cfe626afc97e66ddae3a4257b8da6df03d321c9a5c0273abb42a7e214476a3d2cf9a8d2ff1b4f200e7572d1e07a6970b24343d1d96fc30275ce
+  checksum: 3d96e5d04f7734f9361bf57ade3892346198c379c2121c0b08de3ab8615a5703d07a5f09f0f89d07cafaf85e6f71c3cb4f4dfb2d4b17aee12db09df476ebc897
   languageName: node
   linkType: hard
 
@@ -58,7 +58,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/transaction@workspace:packages/transaction"
   dependencies:
-    "@near-wallet-selector/core": ^6.0.0
+    "@near-wallet-selector/core": ^7.0.0
     "@tonic-foundation/utils": 1.0.0
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
@@ -476,7 +476,7 @@ __metadata:
 
 "typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.6.4
-  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=7ad353"
+  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -486,7 +486,7 @@ __metadata:
 
 "typescript@patch:typescript@^4.7.3#~builtin<compat/typescript>":
   version: 4.7.3
-  resolution: "typescript@patch:typescript@npm%3A4.7.3#~builtin<compat/typescript>::version=4.7.3&hash=7ad353"
+  resolution: "typescript@patch:typescript@npm%3A4.7.3#~builtin<compat/typescript>::version=4.7.3&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver

@@ -13,7 +13,7 @@
     "build": "rm -fr lib && tsc"
   },
   "devDependencies": {
-    "@near-wallet-selector/core": "^6.0.0",
+    "@near-wallet-selector/core": "^7.0.0",
     "@tsconfig/recommended": "^1.0.1",
     "@types/bn.js": "^5.1.0",
     "typescript": "^4.6.4"

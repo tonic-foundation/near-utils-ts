@@ -2,7 +2,7 @@
   "name": "@tonic-foundation/config",
   "homepage": "https://github.com/tonic-foundation/near-utils-ts",
   "repository": "tonic-foundation/near-utils-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "files": [
     "lib"

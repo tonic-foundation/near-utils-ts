@@ -30,8 +30,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/storage@workspace:packages/storage"
   dependencies:
-    "@tonic-foundation/transaction": 1.0.0
-    "@tonic-foundation/utils": 1.0.0
+    "@tonic-foundation/transaction": 1.0.1
+    "@tonic-foundation/utils": 1.0.1
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.0
@@ -44,8 +44,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/token@workspace:packages/token"
   dependencies:
-    "@tonic-foundation/transaction": 1.0.0
-    "@tonic-foundation/utils": 1.0.0
+    "@tonic-foundation/transaction": 1.0.1
+    "@tonic-foundation/utils": 1.0.1
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.1
@@ -54,12 +54,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tonic-foundation/transaction@1.0.0, @tonic-foundation/transaction@workspace:packages/transaction":
+"@tonic-foundation/transaction@1.0.1, @tonic-foundation/transaction@workspace:packages/transaction":
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/transaction@workspace:packages/transaction"
   dependencies:
     "@near-wallet-selector/core": ^7.0.0
-    "@tonic-foundation/utils": 1.0.0
+    "@tonic-foundation/utils": 1.0.1
     "@tsconfig/recommended": ^1.0.1
     "@types/bn.js": ^5.1.0
     bn.js: ^5.2.0
@@ -68,7 +68,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tonic-foundation/utils@1.0.0, @tonic-foundation/utils@workspace:packages/utils":
+"@tonic-foundation/utils@1.0.1, @tonic-foundation/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@tonic-foundation/utils@workspace:packages/utils"
   dependencies:

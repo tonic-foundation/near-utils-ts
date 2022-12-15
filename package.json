@@ -17,7 +17,7 @@
     "trailingComma": "es5",
     "singleQuote": true
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",

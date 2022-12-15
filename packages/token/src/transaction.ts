@@ -9,7 +9,8 @@ export interface FtTransferArgs {
   /**
    * Amount to send
    */
-  amount: BN;
+  amount: BN | string;
+  memo?: string;
 }
 export function ftTransfer(
   tokenId: string,
@@ -23,6 +24,7 @@ export function ftTransfer(
     args: {
       receiver_id: args.receiverId,
       amount: args.amount.toString(),
+      memo: args.memo,
     },
     gas,
     attachedDeposit,
@@ -37,7 +39,7 @@ export interface FtTransferCallArgs {
   /**
    * Amount to send
    */
-  amount: BN;
+  amount: BN | string;
   /**
    * For full control of what gets sent, pass the message as a string.
    */

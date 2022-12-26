@@ -2,7 +2,7 @@
   "name": "@tonic-foundation/storage",
   "homepage": "https://github.com/tonic-foundation/near-utils-ts",
   "repository": "tonic-foundation/near-utils-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -19,8 +19,8 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "@tonic-foundation/transaction": "1.0.1",
-    "@tonic-foundation/utils": "1.0.1",
+    "@tonic-foundation/transaction": "1.0.2",
+    "@tonic-foundation/utils": "1.0.2",
     "bn.js": "^5.2.0",
     "near-api-js": "^1.0.0"
   }
